@@ -1,0 +1,9 @@
+.menu{
+    
+    text-align: end;
+ 
+ }
+.menu a{
+    text-decoration: none;
+    padding-right: 50px;
+}

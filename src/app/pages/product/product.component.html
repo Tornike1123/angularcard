@@ -1,0 +1,33 @@
+<div class="container">
+
+<button class="btn btn-danger" (click)="getdate()">მოთხოვნა</button>
+<ul *ngFor="let dyes of Product"> 
+<li>{{dyes.userId}}</li>
+<li>{{dyes.id}}</li>
+<li>{{dyes.title}}</li>
+</ul>
+  <input type="text" #search (input)="finds(search.value)">
+    <div class="row">
+      <div class="col-lg-4" *ngFor="let prod of findedarray; index as i">
+        <div class="card">
+          <img [src]="prod.img" class="card-img-top proddd" alt="..." />
+  
+          <div class="card-body">
+          
+            <h5 class="card-title">{{ prod.title }}</h5>
+            <p class="text-secendary">{{ prod.cat_name }}</p>
+            
+             
+            <a [routerLink]="['/detales/'+prod.id]" class="btn btn-success btn-sm">სრულად ნახვა</a>
+           
+
+            <ng-template #nodisc>
+              <div class="price">
+                <p>{{ prod.price }} ₾</p>
+              </div>
+            </ng-template>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
